@@ -1,5 +1,24 @@
-@(message: String)(content: String)
+@(users: Seq[User])(implicit flash: Flash)
 
-@main(message) {
-  @play20.welcome(content)
+@main("Users") {
+
+  <p><a href="@routes.Application.blank" class="btn btn-success"><i class="icon-plus icon-white"></i> Add User</a></p>
+
+  @if(!users.isEmpty) {
+    <table class="table table-striped">
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    @for(user <- users) {
+      <tr>
+        <td>@user.id</a></td>
+        <td>@user.name</td>
+        <td>@user.description</td>
+      </tr>
+    }
+    </table>
+  }
 }

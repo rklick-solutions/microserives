@@ -1,4 +1,4 @@
-name := "play-scala"
+name := "play-microservices"
 
 version := "1.0-SNAPSHOT"
 
@@ -12,5 +12,6 @@ libraryDependencies ++= Seq(
   jdbc,
   anorm,
   cache,
-  ws
+  ws,
+"com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.4.0-rc2"
 )
