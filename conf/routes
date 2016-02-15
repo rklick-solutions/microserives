@@ -1,6 +1,16 @@
-GET  /                           controllers.Application.index
-GET  /add                        controllers.Application.blank
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
 
-POST /user                      controllers.Application.insert
+# Default path will just redirect to the user list
+GET    /                          controllers.Application.list
 
-GET     /assets/*file            controllers.Assets.at(path="/public", file)
+# User list
+GET    /users                     controllers.Application.list
+
+
+# Path for add User
+POST   /user                      controllers.Application.insert
+GET    /create                    controllers.Application.create
+
+GET    /assets/*file              controllers.Assets.at(path="/public", file)

@@ -1,0 +1,48 @@
+@(users: List[User])(implicit flash: play.api.mvc.Flash)
+
+@main("Playing-Microservice") {
+
+<!-- Begin page content -->
+<div class="container">
+    <div class="page-header">
+        <h3>
+            <div>User Size: @users.size</div>
+            <a class="btn btn-success btn-sm pull-right" id="add" href="@routes.Application.create">Add a new user</a>
+        </h3>
+    </div>
+
+    @flash.get("success").map { message =>
+        <div class="alert alert-dismissable alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Well done!</strong> @message
+        </div>
+    }
+
+    @Option(users).filterNot(_.isEmpty).map { employeeList =>
+    <table class="footable table table-striped" data-filter="#filter" data-page-size="10">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        @employeeList.map { employee =>
+        <tr>
+            <td>@employee.id</a></td>
+            <td>@employee.name</td>
+            <td>@employee.description</td>
+        </tr>
+        }
+        </tbody>
+    </table>
+    }.getOrElse {
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <em>Nothing to display</em>
+        </div>
+    </div>
+    }
+</div>
+}

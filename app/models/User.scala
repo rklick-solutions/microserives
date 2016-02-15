@@ -2,22 +2,33 @@ package models
 
 
 /**
- *  User Case Class .
- *
- */
-case class User(id: Int,name: String, description: String)
+  * User object .
+  *
+  */
+case class User(id: Int, name: String, description: String)
 
 
 object Users {
 
-def insert(user:User) ={
-  
-//Put your code to store user in any Database
-  
-}
+  /**
+    * Insert new user
+    *
+    * @param user
+    */
+  def insert(user: User): User = {
+    //TODO: Put your code to store user in any Database
+    user
+  }
 
 
-def findAll={
-List(User(2322,"Akshay","Play Microservices"))
-}
+  /**
+    * Fetch all user list
+    *
+    * @return
+    */
+  def list: List[User] = {
+    //TODO: Put your code to fetch data from database
+    List(User(2000, "Akshay", "Play"), User(2001, "Anand", "Spark"), User(2002, "Supriya", "Spark-GraphX"),
+      User(2003, "Himanshu", "Elastic Search"))
+  }
 }
