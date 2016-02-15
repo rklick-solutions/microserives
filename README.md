@@ -13,7 +13,7 @@ Micro-Services Characteristics:
 [! MSA approach is influenced by SOA framework benefits and  SOA short falls.]
 
 
-Deployment : microservices
+#Deployment : microservices
 
 $ sbt "run <PORT>"
 
