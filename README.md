@@ -15,7 +15,5 @@ Micro-Services Characteristics:
 
 #Deployment : microservices
 
-$ sbt  "run 9000"
-
-We are running this service on port 9000 but you can run it on any port. 
+$ sbt  "run <PORT>"
 
