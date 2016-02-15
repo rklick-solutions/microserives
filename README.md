@@ -15,5 +15,5 @@ Micro-Services Characteristics:
 
 #Deployment : microservices
 
-$ sbt "run <PORT>"
+$ sbt  "run <PORT>"
 
