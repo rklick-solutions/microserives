@@ -21,7 +21,7 @@ Micro-Services Characteristics:
 * Clone the project into local system
 * To run the Play framework 2.4.x, you need JDK 8 or later
 * Execute `sbt clean compile` to build the product
-* Execute `s run` to execute the product
+* Execute `sbt run` to execute the product
 * microservice should now be accessible at localhost:9000
 
 We are running this service on port 9000 but you can run it on any port. 
